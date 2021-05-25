@@ -29,31 +29,31 @@ pip install PyQt6
 
 ## 창 생성
 
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/1.PNG) 
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/1.PNG) 
 
 메인화면 모습
 
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/2.PNG)
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/2.PNG)
 
 새로운 윈도우를 만들어주기 위해서
 
 ```파일 - 새폼``` 클릭
 
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.PNG)
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.PNG)
 
 원하는 폼을 선택 처음에는 보통 ```Main Window``` 선택
 
 ## 구역 설명
 
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.PNG)
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.png)
 
 1. 생성된 폼
 2. 사용 가능한 도구들 모음
 3. 생성된 폼에 추가된 도구들 모음
 4. 스타일 설정
 
-나머지는 사용을 안해봐서 모르겠음
-
+나머지는 사용을 안해봐서 모르겠음   
+<br>
 # 기본 사용법
 
 ```
@@ -69,6 +69,8 @@ if __name__ == "__main__":
 ```
 - run.py
 
+메인 코드를 불러오기 위해서 실행되는 코드   
+굳이 필요는 없음
 
 ```
 from PyQt5 import uic
@@ -85,6 +87,9 @@ class MainWindow(QMainWindow, form_class):
         self.show()
 ```
 - main.py
+
+메인 코드 ui를 연결하고 코드를 실행하고 등등   
+<br>
 
 # 사용법
 
@@ -114,12 +119,14 @@ self.[버튼위젯이름].clicked.connect(연결되는 기능)
 ### 레이블(QLabel)
 ![레이블](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.gif)
 
-레이블 내용 받아오기
+텍스트 입/출력
+
+레이블 내용 받아오기 str 형식으로 받아옴
 ```
 self.[레이블 위젯 이름].text()
 ```
 
-레이블 내용 바꾸기
+레이블 내용 바꾸기 str 형식으로
 ```
 self.[레이블 위젯 이름].setText([넣을 내용 str만 가능])
 ```
@@ -135,13 +142,58 @@ self.pushButton_2.clicked.connect(self.two)
 ```
 def one(self):
     self.content = self.label.text()
-    print(self.content)
 
 def two(self):
     self.label_2.setText(self.content)
 ```
 ```one```함수에서 레이블 내용을 가지고온다. 
 ```two```함수에서 레이블 내용을 넣어준다.
+
+### 라인에디트(QLineEdit)
+![레이아웃 꼭 적용하기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.gif)
+
+텍스트 입/출력
+사용법은 레이블과 같음
+
+라인에디트 내용 받아오기
+```
+self.[라인 에디트 이름].text()
+```
+
+라인데이트 내용 바꾸기
+```
+self.[라인 에디트 이름].setText([넣을 내용 str만 가능])
+```
+
+계산기 예시
+
+```
+self.pushButton_2.clicked.connect(self.sum)
+self.pushButton_3.clicked.connect(self.reset)
+```
+버튼 두개를 각각 더하기와 리셋 함수를 연결
+
+```
+def sum(self):
+    # 라인 에디트에서 수를 받아옴
+    a = self.lineEdit.text()
+    b = self.lineEdit_2.text()
+
+    # 더하기 진행 int 형식으로 변환 필요
+    sum_result = int(a) + int(b)
+
+    # 레이블에 출력
+    self.label.setText(str(sum_result))
+
+def reset(self):
+    # 초기화는 정적으로 내용을 채워주는 방법으로
+    self.lineEdit.setText("0")
+    self.lineEdit_2.setText("0")
+    self.label.setText("더하기 답")
+```
+
+
+
 
 ## 잡기술
 
@@ -165,5 +217,6 @@ self.setWindowFlag(Qt.FramelessWindowHint)
 self.setAttribute(Qt.WA_TranslucentBackground)
 self.setWindowFlag(Qt.FramelessWindowHint)
 ```
-프레임 show() 이전에 넣으면 없어짐
+show() 이전에 넣으면 없어짐
 
+## 스타일
