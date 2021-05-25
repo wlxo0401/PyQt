@@ -90,20 +90,37 @@ class MainWindow(QMainWindow, form_class):
 
 ## 도구
 
+### 레이아웃(Layout)
+![레이아웃](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/1.gif)
 
+1. 수평으로 배치(horizontal Layout)   
+가로 방향으로 배치
+2. 수직으로 배치(Vertical Layout)   
+세로 방향으로 배치
+3. 격자형으로 배치(Grid Layout)   
+바둑판 형식으로 배치
+4. 폼 레이아웃으로 배치(form Layout)   
+회원가입같은 느낌으로 배치?
+
+### 버튼(QPushButton)
+![프레임(타이틀바, title bar) 없애기 ](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/7.PNG)
+
+클릭하면 동작을 수행 
+```
+self.[버튼위젯이름].clicked.connect(연결되는 기능)
+```
+![레이아웃](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.gif)
 
 ## 잡기술
 
 ### 레이아웃 꼭 적용하기
-
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/7.gif)
+![레이아웃 꼭 적용하기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/2.gif)
 
 레이아웃을 적용해야 프로그램 사이즈가 바뀌어도 동적으로 도구들이 사이즈가 변함
 
 
 ### 프레임(타이틀바, title bar) 없애기 
-
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/6.PNG)
+![프레임(타이틀바, title bar) 없애기 ](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/6.PNG)
 ```
 self.setWindowFlag(Qt.FramelessWindowHint)
 ```
@@ -111,8 +128,7 @@ self.setWindowFlag(Qt.FramelessWindowHint)
 프레임이 없어진 만큼 윈도우 기본 API(닫기, 최소화, 최대화, aero snap 등등)은 </br>스스로 구현해야 함
 
 ### 프레임 및 배경 없애기
-
-![영상정보 미리 로드](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.PNG)
+![프레임 및 배경 없애기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.PNG)
 ```
 self.setAttribute(Qt.WA_TranslucentBackground)
 self.setWindowFlag(Qt.FramelessWindowHint)
