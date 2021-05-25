@@ -109,7 +109,39 @@ class MainWindow(QMainWindow, form_class):
 ```
 self.[버튼위젯이름].clicked.connect(연결되는 기능)
 ```
-![레이아웃](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.gif)
+![버튼 기능](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.gif)
+
+### 레이블(QLabel)
+![레이블](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.gif)
+
+레이블 내용 받아오기
+```
+self.[레이블 위젯 이름].text()
+```
+
+레이블 내용 바꾸기
+```
+self.[레이블 위젯 이름].setText([넣을 내용 str만 가능])
+```
+
+예시
+
+```
+self.pushButton.clicked.connect(self.one)
+self.pushButton_2.clicked.connect(self.two)
+```
+버튼 두개를 두 함수와 연결
+
+```
+def one(self):
+    self.content = self.label.text()
+    print(self.content)
+
+def two(self):
+    self.label_2.setText(self.content)
+```
+```one```함수에서 레이블 내용을 가지고온다. 
+```two```함수에서 레이블 내용을 넣어준다.
 
 ## 잡기술
 
