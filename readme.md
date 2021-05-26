@@ -29,14 +29,21 @@
   [1.적용방법](#적용방법)   
   [2.종류](#종류)   
    - [color](#color)
+   - [border-color](#border-color)
+   - [border-width](#border-width)
+   - [border-style](#border-style)
+   - [border-radius](#border-radius)
+   - [hover(마우스 올렸을 때)](#hover마우스-올렸을-때)
+   - [pressed(마우스 누르기(클릭) 상황)](#pressed마우스-누르기클릭-상황)
+
 
 # 1. PyQt
 
 > 작성일자 2021-05-26 ~    
 > 작성자 : 김지태   
 > 참고 1 : https://wikidocs.net/book/2944   
-> 참고 2 : https://www.youtube.com/c/WandersonIsMe
-
+> 참고 2 : https://www.youtube.com/c/WandersonIsMe   
+> 참고 3 : https://het.as.utexas.edu/HET/Software/html/stylesheet-reference.html
 <hr>
 
 ```
@@ -392,6 +399,17 @@ QPushButton {
 ```
 > 위젯 내용색 변경
 
+#### border-color
+![border-color](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/28.PNG)
+```
+QPushButton{
+	border-color: rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px
+}
+```
+> ```border-color: rgb(255, 200, 28);```, ```border-color: #FFFFFF;``` 두 방법으로 테두리 색 지정 가능
+
 #### border-width
 | 1px | 10px |  
 |----|----| 
@@ -403,7 +421,7 @@ QPushButton{
 	border-width : 1px
 }
 ```
-> 태두리 두깨를 설정 가능
+> ```border-width : 1px``` 태두리 두깨를 설정 가능
 
 #### border-style
 | dashed | dot-dash | dot-dot-dash | dotted |
@@ -417,9 +435,71 @@ QPushButton{
 | ridge | solid | none |
 |----|----|----|
 | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/25.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/26.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/27.PNG) |
-
-#### border-color
+```
+QPushButton{
+	border-color: rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 10px
+}
+```
+> ```border-style : solid;``` 테두리 스타일 설정
 
 #### border-radius
+![border-radius](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/29.PNG)
+```
+QPushButton{
+	border-color: rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px;
+	border-radius : 30px;
+}
+```
+> ```border-radius : 30px;``` 으로 테두리 코너 적용 가능
 
+#### hover(마우스 올렸을 때)
+![hover(마우스 올렸을 때)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/10.gif)
+```
+QPushButton{
+	border-color: rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px;
+	border-radius : 30px;
+}
 
+QPushButton:hover{
+	background-color : rgb(200, 255, 30);
+	border-color : rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px;
+	border-radius : 30px;
+}
+```
+> ```QPushButton:hover```와 같이 위젯에 hover 스타일 추가, 호버 상황 여부로 스타일 설정하는게 좋음
+
+#### pressed(마우스 누르기(클릭) 상황)
+![pressed(마우스 누르기(클릭) 상황)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/11.gif)
+```
+QPushButton{
+	border-color: rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px;
+	border-radius : 30px;
+}
+
+QPushButton:hover{
+	background-color : rgb(200, 255, 30);
+	border-color : rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px;
+	border-radius : 30px;
+}
+
+QPushButton:pressed {
+	background-color : rgb(200, 100, 30);
+	border-color : rgb(255, 200, 28);	
+	border-style : solid;
+	border-width : 5px;
+	border-radius : 30px;
+}
+```
+> ```QPushButton:pressed```와 같이 위젯에 pressed 스타일 추가, 눌름 상황 여부로 스타일 설정하는게 좋음
