@@ -1,5 +1,10 @@
 # PyQt
 
+> 작성일자 2021-05-26 ~    
+> 작성자 : 김지태   
+> 참고 1 : https://wikidocs.net/book/2944   
+> 참고 2 : https://www.youtube.com/c/WandersonIsMe
+
 ## PyQt란?
 PyQt란, Qt의 레이아웃에 Python의 코드를 연결하여 GUI 프로그램을 만들 수 있게 해주는 프레임워크를 의미합니다. PyQt는 C++의 Cross Platform GUI Framework인 Qt를 영국의 Riverbank Computing에서 Python 모듈로 변환해주는 툴을 만들어주며 시작되었습니다. 현재는 PyQt4버전과 PyQt5버전이 주로 사용되고 있습니다.
 
@@ -107,8 +112,15 @@ class MainWindow(QMainWindow, form_class):
 4. 폼 레이아웃으로 배치(form Layout)   
 회원가입같은 느낌으로 배치?
 
+### 프레임(QFrame)
+![프레임(타이틀바, title bar) 없애기 ](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/8.PNG)
+
+html에서 div로 틀을 만들어 나가듯이 pyqt에서도 frame으로 틀을 잡아가면서
+하는게 편해보인다. frame 추가 후 레이아웃 적용과 마진 및 스페이스 그리고 최대 사이즈
+설정으로 좀 더 디테일한 디자인이 가능해진다.
+
 ### 버튼(QPushButton)
-![프레임(타이틀바, title bar) 없애기 ](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/7.PNG)
+![버튼(QPushButton)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/7.PNG)
 
 클릭하면 동작을 수행 
 ```
@@ -150,7 +162,7 @@ def two(self):
 ```two```함수에서 레이블 내용을 넣어준다.
 
 ### 라인에디트(QLineEdit)
-![레이아웃 꼭 적용하기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.gif)
+![라인에디트(QLineEdit)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.gif)
 
 텍스트 입/출력
 사용법은 레이블과 같음
@@ -191,8 +203,17 @@ def reset(self):
     self.lineEdit_2.setText("0")
     self.label.setText("더하기 답")
 ```
+![라인에디트(QLineEdit)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/6.gif)
 
+텍스트 변화를 인지해서 자동으로 기능 수행
+```
+self.[라인 에디트 이름].textChanged.connect([기능])
+```
 
+라인에디트에서 엔터를 클릭해서 기능 수행
+```
+self.[라인 에디트 이름].returnPressed.connect([기능])
+```
 
 
 ## 잡기술
