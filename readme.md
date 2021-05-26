@@ -128,6 +128,30 @@ self.[버튼위젯이름].clicked.connect(연결되는 기능)
 ```
 ![버튼 기능](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.gif)
 
+### 라디오버튼(QRadioButton)
+![라디오버튼(QRadioButton)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/7.gif)
+
+setText(), text()를 통해서 라디오 버튼 텍스트도 읽고 쓰기 가능
+
+라디오 버튼 토글(클릭)
+```
+self.라디오 위젯 이름].toggled.connect([기능])
+self.라디오 위젯 이름].clicked.connect([기능])
+```
+> 위 두개다 사용 가능
+
+라디오 버튼 자동으로 체크를 걸기
+```
+self.[라디오 위젯 이름].setChecked(True)
+```
+> 체크를 다른 기능들을 통해서 자동으로 걸기 가능
+
+체크 여부 확인
+```
+self.[라디오 위젯 이름].isChecked()
+```
+> 체크 여부를 확인하여 if문등 사용 가능 True False로 알려줌
+
 ### 레이블(QLabel)
 ![레이블](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.gif)
 
