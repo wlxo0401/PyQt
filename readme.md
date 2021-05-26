@@ -1,6 +1,6 @@
 # 목차
-[1. PyQt](#1.-pyqt)   
-[2. Qt Desinger](#2.-qt-desinger)
+[1. PyQt](#1.-PyQt)   
+[2. Qt Desinger](#2.-Qt-Desinger)   
 [3. 사용법](#3.-사용법)
 
 
