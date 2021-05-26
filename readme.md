@@ -287,15 +287,15 @@ show() 이전에 넣으면 없어짐
 ### 적용 방법
 ![스타일 적용 방법](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/9.PNG)
 
-> 원하는 위젯 우클릭 후 "styleSheet 바꾸기" 선택  
+> 방법 1 : 원하는 위젯 우클릭 후 "styleSheet 바꾸기" 선택  
 
 ![스타일 적용 방법](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/11.PNG)
 
-> 원하는 스타일 적용
+> 방법 1 : 원하는 스타일 적용
 
 ![스타일 적용 방법](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/10.PNG)
 
-> 오른쪽 속성창에서 바로 입력 가능
+> 방법 2 : 오른쪽 속성창에서 바로 입력 가능
 
 ```
 self.[위젯 이름].setStyleSheet(
@@ -303,7 +303,9 @@ self.[위젯 이름].setStyleSheet(
     "[위젯 종류]:[위젯 상황] { background-color:rgb(10, 10, 10); }"
 )
 ```
-> 소스코드상에서 디자인 적용하기
+> 방법 3 : 소스코드상에서 디자인 적용하기
+
+<hr>
 
 ![기본 사항](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/12.PNG)
 
@@ -312,4 +314,22 @@ self.[위젯 이름].setStyleSheet(
 
 ![기본 사항](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/8.gif)
 
+> 상위 위젯에서 단순하게 ```background-color: rgb(255, 156, 158);``` 식으로 입력하면
+> 하위 위젯들도 공통 속성이 존재하면 동시에 적용됩니다.
 >
+> 위젯마다 스타일을 주는 것이 맞지만 미리 사전 정의를 하면서 진행하는 것이 좋습니다.
+> 아래가 그 예시입니다.
+
+![기본 사항](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/9.gif)
+
+```
+QFrame {
+	background-color: rgb(147, 120, 255);
+}
+```
+```
+QPushButton {
+	background-color: rgb(164, 255, 79);
+}
+```
+> 각각 위젯에 스타일을 적용한 모습입니다.
