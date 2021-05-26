@@ -374,4 +374,39 @@ background-color: #ffffff;
 
 ### 종류
 
+#### background-color
+![백그라운드 컬러](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/13.PNG)
+```
+QPushButton {
+	background-color: #ffffff;
+}
+```
+> 위젯 배경색 변경
+
 #### color
+![컬러](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/14.PNG)
+```
+QPushButton {
+	color: rgb(255, 211, 76);
+}
+```
+> 위젯 내용색 변경
+
+#### border-width
+| 1px | 10px |   
+|![border-width](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/15.PNG) | ![border-width](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/16.PNG) |
+```
+QPushButton{
+	border-color: rgb(255, 134, 28);	
+	border-style : solid;
+	border-width : 1px
+}
+```
+
+#### border-color
+
+#### border-style
+
+#### border-radius
+
+
