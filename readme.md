@@ -403,10 +403,22 @@ QPushButton{
 	border-width : 1px
 }
 ```
-
-#### border-color
+> 태두리 두깨를 설정 가능
 
 #### border-style
+| dashed | dot-dash | dot-dot-dash | dotted |
+|----|----|----|----|
+| ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/17.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/18.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/19.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/20.PNG) |
+
+| double | groove | inset | outset |
+|----|----|----|----|
+| ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/21.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/22.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/23.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/24.PNG) |
+
+| ridge | solid | none |
+|----|----|----|
+| ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/25.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/26.PNG) | ![border-style](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/27.PNG) |
+
+#### border-color
 
 #### border-radius
 
