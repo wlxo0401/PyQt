@@ -1,4 +1,12 @@
-# PyQt
+# 목차
+[1. PyQt](#1.-pyqt)   
+[2. Qt Desinger](#2.-qt-desinger)
+[3. 사용법](#3.-사용법)
+
+
+
+
+# 1. PyQt
 
 > 작성일자 2021-05-26 ~    
 > 작성자 : 김지태   
@@ -37,7 +45,7 @@ PyQt5를 기준으로 작성
 pip install PyQt6
 ```
 
-# Qt Desinger
+# 2. Qt Desinger
 
 - PyQt 및 PySide UI를 쉽게 짜게해주는 프로그램  
 
@@ -114,7 +122,7 @@ class MainWindow(QMainWindow, form_class):
 >
 > 프레임 안에 위젯을 넣을 경우 스타일 적용할 때 구분을 잘해야함
 
-# 사용법
+# 3.사용법
 
 ## 도구
 
