@@ -5,6 +5,15 @@
 > 참고 1 : https://wikidocs.net/book/2944   
 > 참고 2 : https://www.youtube.com/c/WandersonIsMe
 
+<hr>
+
+```
+주의
+- 틀린 내용이 있을 수 있습니다. 
+- 사용한 위주로 정리되었습니다.
+- 더 좋은 방법은 많습니다.
+```
+
 ## PyQt란?
 PyQt란, Qt의 레이아웃에 Python의 코드를 연결하여 GUI 프로그램을 만들 수 있게 해주는 프레임워크를 의미합니다. PyQt는 C++의 Cross Platform GUI Framework인 Qt를 영국의 Riverbank Computing에서 Python 모듈로 변환해주는 툴을 만들어주며 시작되었습니다. 현재는 PyQt4버전과 PyQt5버전이 주로 사용되고 있습니다.
 
@@ -95,6 +104,15 @@ class MainWindow(QMainWindow, form_class):
 
 메인 코드 ui를 연결하고 코드를 실행하고 등등   
 <br>
+
+## 기타 사항
+> 특수한 위젯만 사용 가능한 메소드가 아니면 다양하게 적용 가능합니다.   
+> ex) text(), setText(), clicked 등등   
+> 
+> 프레임(틀) 기능하는 위젯 안에는 다른 위젯을 추가로 넣을 수 있습니다.   
+> ex) layout, frame, groupbox, stacked Widget 등등
+>
+> 프레임 안에 위젯을 넣을 경우 스타일 적용할 때 구분을 잘해야함
 
 # 사용법
 
@@ -265,3 +283,33 @@ self.setWindowFlag(Qt.FramelessWindowHint)
 show() 이전에 넣으면 없어짐
 
 ## 스타일
+
+### 적용 방법
+![스타일 적용 방법](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/9.PNG)
+
+> 원하는 위젯 우클릭 후 "styleSheet 바꾸기" 선택  
+
+![스타일 적용 방법](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/11.PNG)
+
+> 원하는 스타일 적용
+
+![스타일 적용 방법](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/10.PNG)
+
+> 오른쪽 속성창에서 바로 입력 가능
+
+```
+self.[위젯 이름].setStyleSheet(
+    "[위젯 종류] {color: white; background-color: rgb(58, 58, 58);}"
+    "[위젯 종류]:[위젯 상황] { background-color:rgb(10, 10, 10); }"
+)
+```
+> 소스코드상에서 디자인 적용하기
+
+![기본 사항](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/12.PNG)
+
+> 위젯 디자인을 적용할 때, 상위와 하위 위젯 연관성을 잘 생각해야합니다.
+> 위 사진은 프레임 속에 버튼을 넣은 예시 이미지 입니다.
+
+![기본 사항](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/8.gif)
+
+>
