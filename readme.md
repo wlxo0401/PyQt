@@ -393,7 +393,8 @@ QPushButton {
 > 위젯 내용색 변경
 
 #### border-width
-| 1px | 10px |   
+| 1px | 10px |  
+|----|----| 
 |![border-width](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/15.PNG) | ![border-width](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/16.PNG) |
 ```
 QPushButton{
