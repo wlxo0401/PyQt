@@ -1,7 +1,17 @@
 # 목차
 [1. PyQt](#1-PyQt)   
+ - [PyQt란?](#pyqt란)
+ - [PyQt의 특징](#pyqt의-특징)   
+ - [PyQt5 설치](#pyqt5-설치)   
+ - [PyQt6 설치](#pyqt6-설치)   
+
 [2. Qt Desinger](#2-Qt-Desinger)   
-[3. 사용법](#3-사용법)
+ - [창 생성]
+ - [구역 설명]
+
+[3. 시작하기 전](#3-시작하기-전)
+
+[4. 사용방법](#4-사용법)
 
 
 
@@ -76,7 +86,8 @@ pip install PyQt6
 
 나머지는 사용을 안해봐서 모르겠음   
 <br>
-# 기본 사용법
+
+# 시작하기 전
 
 ```
 import sys
@@ -122,7 +133,7 @@ class MainWindow(QMainWindow, form_class):
 >
 > 프레임 안에 위젯을 넣을 경우 스타일 적용할 때 구분을 잘해야함
 
-# 3.사용법
+# 4. 사용방법
 
 ## 도구
 
