@@ -15,10 +15,20 @@
 
 [4. 사용방법](#4-사용방법)
  - [도구](#도구)   
-  [1.레이아웃](#레이아웃layout)
-
-
-
+  [1.레이아웃(QLayout)](#레이아웃qlayout)   
+  [2.프레임(QFrame)](#프레임qframe)   
+  [3.버튼(QPushButton)](#버튼qpushbutton)   
+  [4.라디오버튼(QRadioButton)](#라디오버튼qradiobutton)   
+  [5.레이블(QLabel)](#레이블qlabel)   
+  [6.라인에디트(QLineEdit)](#라인에디트qlinedit)
+ - [잡기술](#잡기술)   
+  [1.레이아웃 꼭 적용하기](#레이아웃-꼭-적용하기)   
+  [2.프레임(타이틀바, title bar) 없애기](#프레임타이틀바-title-bar-없애기)   
+  [3.프레임 및 배경 없애기](#프레임-및-배경-없애기)   
+ - [스타일](#스타일)   
+  [1.적용방법](#적용방법)   
+  [2.종류](#종류)   
+   - [color](#color)
 
 # 1. PyQt
 
@@ -141,7 +151,7 @@ class MainWindow(QMainWindow, form_class):
 
 ## 도구
 
-### 레이아웃(Layout)
+### 레이아웃(QLayout)
 ![레이아웃](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/1.gif)
 
 1. 수평으로 배치(horizontal Layout)   
@@ -356,3 +366,12 @@ QPushButton {
 }
 ```
 > 각각 위젯에 스타일을 적용한 모습입니다.
+
+```
+background-color: #ffffff;
+```
+> 색상은 ```rgb(255, 255, 255);``` 또는 ```#FFFFFF``` 방법으로 입력 가능합니다.
+
+### 종류
+
+#### color
