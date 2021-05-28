@@ -51,6 +51,7 @@
 - 틀린 내용이 있을 수 있습니다. 
 - 사용한 위주로 정리되었습니다.
 - 더 좋은 방법은 많습니다.
+- 개인적인 용도로 남들이 보기 불편합니다.
 ```
 
 ## PyQt란?
@@ -182,7 +183,7 @@ html에서 div로 틀을 만들어 나가듯이 pyqt에서도 frame으로 틀을
 
 클릭하면 동작을 수행 
 ```
-self.[버튼위젯이름].clicked.connect(연결되는 기능)
+self.[버튼위젯 이름].clicked.connect(기능)
 ```
 ![버튼 기능](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.gif)
 
@@ -193,20 +194,20 @@ setText(), text()를 통해서 라디오 버튼 텍스트도 읽고 쓰기 가�
 
 라디오 버튼 토글(클릭)
 ```
-self.라디오 위젯 이름].toggled.connect([기능])
-self.라디오 위젯 이름].clicked.connect([기능])
+self.라디오위젯 이름].toggled.connect([기능])
+self.라디오위젯 이름].clicked.connect([기능])
 ```
 > 위 두개다 사용 가능
 
 라디오 버튼 자동으로 체크를 걸기
 ```
-self.[라디오 위젯 이름].setChecked(True)
+self.[라디오위젯 이름].setChecked(True)
 ```
 > 체크를 다른 기능들을 통해서 자동으로 걸기 가능
 
 체크 여부 확인
 ```
-self.[라디오 위젯 이름].isChecked()
+self.[라디오위젯 이름].isChecked()
 ```
 > 체크 여부를 확인하여 if문등 사용 가능 True False로 알려줌
 
@@ -217,12 +218,12 @@ self.[라디오 위젯 이름].isChecked()
 
 레이블 내용 받아오기 str 형식으로 받아옴
 ```
-self.[레이블 위젯 이름].text()
+self.[레이블위젯 이름].text()
 ```
 
 레이블 내용 바꾸기 str 형식으로
 ```
-self.[레이블 위젯 이름].setText([넣을 내용 str만 가능])
+self.[레이블위젯 이름].setText([넣을 내용 str만 가능])
 ```
 
 예시
@@ -251,12 +252,12 @@ def two(self):
 
 라인에디트 내용 받아오기
 ```
-self.[라인 에디트 이름].text()
+self.[라인에디트 이름].text()
 ```
 
 라인데이트 내용 바꾸기
 ```
-self.[라인 에디트 이름].setText([넣을 내용 str만 가능])
+self.[라인에디트 이름].setText([넣을 내용 str만 가능])
 ```
 
 계산기 예시
@@ -289,13 +290,97 @@ def reset(self):
 
 텍스트 변화를 인지해서 자동으로 기능 수행
 ```
-self.[라인 에디트 이름].textChanged.connect([기능])
+self.[라인에디트 이름].textChanged.connect([기능])
 ```
 
 라인에디트에서 엔터를 클릭해서 기능 수행
 ```
-self.[라인 에디트 이름].returnPressed.connect([기능])
+self.[라인에디트 이름].returnPressed.connect([기능])
 ```
+
+### 리스트위젯(QListWidget)
+![리스트위젯(QListWidget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/12.gif)
+```
+# 한번 클릭
+self.[리스트위젯 이름].itemClicked.connect([기능])
+
+# 더블 클릭
+self.[리스트위젯 이름].itemDoubleClicked.connect([기능])
+
+# 항목 변경
+self.[리스트위젯 이름].currentItemChanged.connect([기능])
+```
+> 리스트위젯 클릭 이벤트를 담당하는 신호
+
+```
+# 선택된 리스트위젯 아이템 번호
+self.[리스트위젯 이름].currentRow()
+
+# 선택된 리스트위젯 객체 반환
+self.[리스트위젯 이름].currentItem()
+
+# row번째 리스트위젯 객체 반환
+self.[리스트위젯 이름].item(row)
+```
+> 리스트 목록 정보를 가지고오는 함수들이다.
+> 객체반환은 함수 뒤에 ```.text()```를 하면 텍스트를 가지고옴
+
+```
+# 리스트위제위젯에 항목을 추가합니다.
+self.[리스트위젯 이름].addItem(String)
+
+# row번 자리에 항목을 추가합니다.
+self.[리스트위젯 이름].insertItem(row, String)
+
+# row번 자리 항목으로 가지고 옵니다.
+self.[리스트위젯 이름].tatkeItem(row)
+
+# 리스트위젯을 초기화합니다.
+self.[리스트위젯 이름].clear()
+```
+> 리스트 위젯에 항목들을 컨트롤합니다. 조합을 통하여 다양하게 사용가능   
+> Qt Designer를 통하여 다양한 속성 조절이 가능합니다.
+
+예시
+
+```
+# 버튼을 통하여 기능들을 연결합니다.
+self.pushButton.clicked.connect(self.add_item)
+self.pushButton_2.clicked.connect(self.insert_item)
+self.pushButton_3.clicked.connect(self.take_item)
+self.pushButton_4.clicked.connect(self.clear)
+self.pushButton_5.clicked.connect(self.item_row)
+
+# 리스트위젯 클릭을 통하여 기능 연결
+self.listWidget.itemClicked.connect(self.one_click)
+self.listWidget.itemDoubleClicked.connect(self.double_click)
+self.listWidget.currentItemChanged.connect(self.change_item)
+```
+
+```
+def add_item(self):
+    self.listWidget.addItem(self.lineEdit.text())
+def insert_item(self):
+    self.listWidget.insertItem(int(self.lineEdit_2.text()), self.lineEdit.text())
+def take_item(self):
+    self.listWidget.takeItem(int(self.lineEdit_3.text()))
+def clear(self):
+    self.listWidget.clear()
+def item_row(self):
+    self.label_4.setText(self.listWidget.item(int(self.lineEdit_4.text())).text())
+
+
+def one_click(self):
+    self.label_2.setText(str(self.listWidget.currentRow()))
+    self.label_3.setText(self.listWidget.currentItem().text())
+def double_click(self):
+    self.label_5.setText(str(self.listWidget.currentRow()))
+    self.label_6.setText(self.listWidget.currentItem().text())
+def change_item(self):
+    self.label_8.setText(str(self.listWidget.currentRow()))
+    self.label_9.setText(self.listWidget.currentItem().text())
+```
+> 각 기능들 사용 예시입니다.
 
 
 ## 잡기술
