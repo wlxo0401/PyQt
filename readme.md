@@ -19,12 +19,16 @@
   [2.프레임(QFrame)](#프레임qframe)   
   [3.버튼(QPushButton)](#버튼qpushbutton)   
   [4.라디오버튼(QRadioButton)](#라디오버튼qradiobutton)   
+  [5.체크박스(QCheckBox)](#체크박스qcheckbox)   
   [5.레이블(QLabel)](#레이블qlabel)   
-  [6.라인에디트(QLineEdit)](#라인에디트qlinedit)
+  [6.라인에디트(QLineEdit)](#라인에디트qlinedit)   
+  [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)
  - [잡기술](#잡기술)   
   [1.레이아웃 꼭 적용하기](#레이아웃-꼭-적용하기)   
   [2.프레임(타이틀바, title bar) 없애기](#프레임타이틀바-title-bar-없애기)   
-  [3.프레임 및 배경 없애기](#프레임-및-배경-없애기)   
+  [3.프레임 및 배경 없애기](#프레임-및-배경-없애기)  
+  [4.체크박스(QCheckBox)로 다른 체크박스 키고 끄기](#체크박스qcheckbox로-다른-체크박스-키고-끄기)  
+  [5.위젯 활성화/비활성화(껏다 키기)](#위젯-활성화/비활성화껏다-키기)   
  - [스타일](#스타일)   
   [1.적용방법](#적용방법)   
   [2.종류](#종류)   
@@ -48,10 +52,12 @@
 
 ```
 주의
+
 - 틀린 내용이 있을 수 있습니다. 
 - 사용한 위주로 정리되었습니다.
 - 더 좋은 방법은 많습니다.
-- 개인적인 용도로 남들이 보기 불편합니다.
+- 개인적인 용도로 필력 수준이 떨어지고 남들이 보기 불편합니다.
+- 
 ```
 
 ## PyQt란?
@@ -190,7 +196,8 @@ self.[버튼위젯 이름].clicked.connect(기능)
 ### 라디오버튼(QRadioButton)
 ![라디오버튼(QRadioButton)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/7.gif)
 
-setText(), text()를 통해서 라디오 버튼 텍스트도 읽고 쓰기 가능
+> setText(), text()를 통해서 라디오 버튼 텍스트도 읽고 쓰기 가능   
+> 라디오버튼은 다중 선택이 불가능합니다.
 
 라디오 버튼 토글(클릭)
 ```
@@ -210,6 +217,64 @@ self.[라디오위젯 이름].setChecked(True)
 self.[라디오위젯 이름].isChecked()
 ```
 > 체크 여부를 확인하여 if문등 사용 가능 True False로 알려줌
+
+### 체크박스(QCheckBox)
+![체크박스(QCheckBox)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/13.gif)
+```
+self.[체크박스 이름].stateChanged.connect([기능])
+```
+> 체크박스 여부만 알고 있으면 다른 위젯들과 같이 조합해서 사용 가능합니다.
+
+예시
+```
+# 놀이를 고르는 체크 박스 두개
+self.checkBox.stateChanged.connect(self.work)
+self.checkBox_2.stateChanged.connect(self.work)
+
+# 음식을 고르는 체크 박스 두개
+self.checkBox_3.stateChanged.connect(self.work)
+self.checkBox_4.stateChanged.connect(self.work)
+
+# 정보를 담을 리스트. 체크박스 활용은 각자 다릅니다.
+self.game = list()
+self.food = list()
+```
+
+```
+def work(self):
+        if self.checkBox.isChecked():
+            if self.checkBox.text() not in self.game:
+                self.game.append(self.checkBox.text())
+        else:
+            if self.checkBox.text() in self.game:
+                self.game.remove(self.checkBox.text())
+
+        if self.checkBox_2.isChecked():
+            if self.checkBox_2.text() not in self.game:
+                self.game.append(self.checkBox_2.text())
+        else:
+            if self.checkBox_2.text() in self.game:
+                self.game.remove(self.checkBox_2.text())
+        
+        if self.checkBox_3.isChecked():
+            if self.checkBox_3.text() not in self.food:
+                self.food.append(self.checkBox_3.text())
+        else:
+            if self.checkBox_3.text() in self.food:
+                self.food.remove(self.checkBox_3.text())
+
+        if self.checkBox_4.isChecked():
+            if self.checkBox_4.text() not in self.food:
+                self.food.append(self.checkBox_4.text())
+        else:
+            if self.checkBox_4.text() in self.food:
+                self.food.remove(self.checkBox_4.text())
+        
+        self.label.setText(f"나는 {self.game}가 좋아요. 점심으로 {self.food}를 먹었어요.")
+```
+> 체크 박스 여부에 따라 리스트 삽입/제거를 수행하고 그대로 레이블에 출력하는 코드   
+> 더 좋은 방법이 있을 수 있지만 간단하게 생각해본 내용입니다.   
+> 체크박스는 라디오버튼과 다르게 다중 선택이 가능합니다.
 
 ### 레이블(QLabel)
 ![레이블](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.gif)
@@ -261,7 +326,6 @@ self.[라인에디트 이름].setText([넣을 내용 str만 가능])
 ```
 
 계산기 예시
-
 ```
 self.pushButton_2.clicked.connect(self.sum)
 self.pushButton_3.clicked.connect(self.reset)
@@ -300,6 +364,8 @@ self.[라인에디트 이름].returnPressed.connect([기능])
 
 ### 리스트위젯(QListWidget)
 ![리스트위젯(QListWidget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/12.gif)
+> 리스트는 위젯(Widget)과 뷰(view)가 있는데 위젯이 더 간편한 것 같음   
+> 사용법은 같으나 편리함 정도 차이가 있음
 ```
 # 한번 클릭
 self.[리스트위젯 이름].itemClicked.connect([기능])
@@ -342,7 +408,6 @@ self.[리스트위젯 이름].clear()
 > Qt Designer를 통하여 다양한 속성 조절이 가능합니다.
 
 예시
-
 ```
 # 버튼을 통하여 기능들을 연결합니다.
 self.pushButton.clicked.connect(self.add_item)
@@ -406,6 +471,28 @@ self.setAttribute(Qt.WA_TranslucentBackground)
 self.setWindowFlag(Qt.FramelessWindowHint)
 ```
 show() 이전에 넣으면 없어짐
+
+### 체크박스(QCheckBox)로 다른 체크박스 키고 끄기
+![체크박스(QCheckBox)로 다른 체크박스 키고 끄기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/14.gif)
+```
+# 체크 풀기
+self.[체크박스위젯 이름].setChecked(False)
+
+# 체크 하기
+self.[체크박스위젯 이름].setChecked(True)
+```
+> 위 함수로 간단하게 체크를 대신 켜고 끄기가 가능하다.
+
+### 위젯 활성화/비활성화(껏다 키기)
+![위젯 활성화/비활성화(껏다 키기)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/15.gif)
+```
+# 비활성화
+self.[위젯 이름].setDisabled(True)
+
+# 활성화
+self.[위젯 이름].setEnabled(True)
+```
+> 체크박스 또는 버튼이나 특정 상황에 위젯을 껏다 켜기를 수행할 수 있습니다.
 
 ## 스타일
 
