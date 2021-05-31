@@ -28,7 +28,8 @@
   [2.프레임(타이틀바, title bar) 없애기](#프레임타이틀바-title-bar-없애기)   
   [3.프레임 및 배경 없애기](#프레임-및-배경-없애기)  
   [4.체크박스(QCheckBox)로 다른 체크박스 키고 끄기](#체크박스qcheckbox로-다른-체크박스-키고-끄기)  
-  [5.위젯 활성화/비활성화(껏다 키기)](#위젯-활성화비활성화껏다-키기)   
+  [5.위젯 활성화/비활성화(껏다 키기)](#위젯-활성화비활성화껏다-키기)  
+  [6.툴팁(ToolTip)](#툴팁tooltip)    
  - [스타일](#스타일)   
   [1.적용방법](#적용방법)   
   [2.종류](#종류)   
@@ -447,6 +448,47 @@ def change_item(self):
 ```
 > 각 기능들 사용 예시입니다.
 
+### 슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)
+![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/30.PNG)
+
+![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/19.gif)   
+```
+self.[슬라이더, 다이얼 위젯 이름].value()
+self.[슬라이더, 다이얼 위젯 이름].minimum()
+self.[슬라이더, 다이얼 위젯 이름].maximum()
+self.[슬라이더, 다이얼 위젯 이름].singleStep()
+self.[슬라이더, 다이얼 위젯 이름].pageStep()
+```
+> Value : 슬라이더, 다이얼의 값을 의미   
+> Minimum : 슬라이더, 다이얼이 가질 수 있는 가장 작은 값   
+> Maximum : 슬라이더, 다이얼이 가질 수 있는 가장 큰 값   
+> SingleStep : Slider를 옮기거나, 방향키를 눌러 이동할 수 있는 최소한의 값
+> PageStep : 크게 크게 움직인 다면 이동할 수 있는 값 ex) 마우스로 빈공간 클릭, page up, page down 같은
+
+![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/18.gif)
+```
+# 위젯이 움직이면 기능 수행
+self.[슬라이더, 다이얼 위젯 이름].sliderMoved.connect([기능])
+
+# 위젯 값이 바뀌면 기능 수행
+self.[슬라이더, 다이얼 위젯 이름].valueChanged.connect([기능])
+
+# 위젯 범위가 변경되면 수행
+self.[슬라이더, 다이얼 위젯 이름].rangeChanged.connect([기능])
+```
+> 슬라이더가 움직여야 반응, 값이 바뀌기만해도 반응, 슬라이더 최대 최소 범위가 바뀌면 다시 작동
+> 하는 3가지 신호가 있다.
+
+![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/20.gif) 
+```
+self.[슬라이더, 다이얼 위젯 이름].setMaximum([설정 최대 수])
+self.[슬라이더, 다이얼 위젯 이름].setMinimum([설정 최소 수])
+self.[슬라이더, 다이얼 위젯 이름].setSingleStep([움직일때 최소 수])
+self.[슬라이더, 다이얼 위젯 이름].setPageStep([움직일때 최소 수])
+self.[슬라이더, 다이얼 위젯 이름].setRange([시작 수], [끝 수])
+self.[슬라이더, 다이얼 위젯 이름].setValue([바로 적용할 수])
+```
+> 상태 변경 
 
 ## 잡기술
 
@@ -493,6 +535,24 @@ self.[위젯 이름].setDisabled(True)
 self.[위젯 이름].setEnabled(True)
 ```
 > 체크박스 또는 버튼이나 특정 상황에 위젯을 껏다 켜기를 수행할 수 있습니다.
+
+### 툴팁(ToolTip)
+![툴팁(ToolTip)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/16.gif)
+
+> Qt Designer에서 설정 가능
+
+![툴팁(ToolTip)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/17.gif)
+
+```
+from PyQt5.QtWidgets import QToolTip
+from PyQt5.QtGui import QFont
+```
+```
+self.pushButton.setToolTip("버튼입니다. <br> 버튼22 <br> <b>두꺼운 글씨</b>")
+QToolTip.setFont(QFont('SansSerif', 30))
+```
+> Qt Designer가 아닌 소스코드 상으로도 툴팁을 추가할 수 있습니다.
+
 
 ## 스타일
 
