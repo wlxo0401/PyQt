@@ -24,6 +24,7 @@
   [6.라인에디트(QLineEdit)](#라인에디트qlinedit)   
   [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)   
   [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-vertical-slider-다이얼dial)
+  [9.스택(Stacked Widget)](#스택stacked-widget)
  - [잡기술](#잡기술)   
   [1.레이아웃 꼭 적용하기](#레이아웃-꼭-적용하기)   
   [2.프레임(타이틀바, title bar) 없애기](#프레임타이틀바-title-bar-없애기)   
@@ -450,8 +451,6 @@ def change_item(self):
 > 각 기능들 사용 예시입니다.
 
 ### 슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)
-![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/30.PNG)
-
 ![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/19.gif)   
 ```
 self.[슬라이더, 다이얼 위젯 이름].value()
@@ -460,11 +459,16 @@ self.[슬라이더, 다이얼 위젯 이름].maximum()
 self.[슬라이더, 다이얼 위젯 이름].singleStep()
 self.[슬라이더, 다이얼 위젯 이름].pageStep()
 ```
+> 값들 받아오기
 > Value : 슬라이더, 다이얼의 값을 의미   
 > Minimum : 슬라이더, 다이얼이 가질 수 있는 가장 작은 값   
 > Maximum : 슬라이더, 다이얼이 가질 수 있는 가장 큰 값   
 > SingleStep : Slider를 옮기거나, 방향키를 눌러 이동할 수 있는 최소한의 값
 > PageStep : 크게 크게 움직인 다면 이동할 수 있는 값 ex) 마우스로 빈공간 클릭, page up, page down 같은
+
+![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/30.PNG)
+> Qt Designer로 설정 가능
+
 
 ![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/18.gif)
 ```
@@ -490,6 +494,15 @@ self.[슬라이더, 다이얼 위젯 이름].setRange([시작 수], [끝 수])
 self.[슬라이더, 다이얼 위젯 이름].setValue([바로 적용할 수])
 ```
 > 상태 변경 
+
+### 스택(Stacked Widget)
+![스택(Stacked Widget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/21.gif) 
+```
+self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호]])
+```
+> 스택 페이지를 입력해주면 간단하게 페이지를 이동할 수 있다.
+
+
 
 ## 잡기술
 
