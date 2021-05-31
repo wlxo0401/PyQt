@@ -22,7 +22,7 @@
   [5.체크박스(QCheckBox)](#체크박스qcheckbox)   
   [5.레이블(QLabel)](#레이블qlabel)   
   [6.라인에디트(QLineEdit)](#라인에디트qlinedit)   
-  [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)
+  [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)   
   [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-verticalslider-다이얼dial)
  - [잡기술](#잡기술)   
   [1.레이아웃 꼭 적용하기](#레이아웃-꼭-적용하기)   
