@@ -296,7 +296,7 @@ self.[레이블위젯 이름].setText([넣을 내용 str만 가능])
 
 예시
 
-```
+```python
 self.pushButton.clicked.connect(self.one)
 self.pushButton_2.clicked.connect(self.two)
 ```
