@@ -21,7 +21,7 @@
   [4.라디오버튼(QRadioButton)](#라디오버튼qradiobutton)   
   [5.체크박스(QCheckBox)](#체크박스qcheckbox)   
   [5.레이블(QLabel)](#레이블qlabel)     
-  [6.라인에디트(QLineEdit)](#라인에디트qlinedit)   
+  [6.라인에디트(QLineEdit)](#라인에디트qlineedit)   
   [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)   
   [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-vertical-slider-다이얼dial)   
   [9.스택(Stacked Widget)](#스택stacked-widget)
@@ -296,13 +296,13 @@ self.[레이블위젯 이름].setText([넣을 내용 str만 가능])
 
 예시
 
-```
+```python
 self.pushButton.clicked.connect(self.one)
 self.pushButton_2.clicked.connect(self.two)
 ```
 버튼 두개를 두 함수와 연결
 
-```
+```python
 def one(self):
     self.content = self.label.text()
 
@@ -312,7 +312,9 @@ def two(self):
 ```one```함수에서 레이블 내용을 가지고온다. 
 ```two```함수에서 레이블 내용을 넣어준다.
 
+
 ### 라인에디트(QLineEdit)
+
 ![라인에디트(QLineEdit)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.gif)
 
 텍스트 입/출력
