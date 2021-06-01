@@ -296,13 +296,13 @@ self.[레이블위젯 이름].setText([넣을 내용 str만 가능])
 
 예시
 
-```python
+```
 self.pushButton.clicked.connect(self.one)
 self.pushButton_2.clicked.connect(self.two)
 ```
 버튼 두개를 두 함수와 연결
 
-```python
+```
 def one(self):
     self.content = self.label.text()
 
