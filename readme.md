@@ -23,7 +23,7 @@
   [5.레이블(QLabel)](#레이블qlabel)   
   [6.라인에디트(QLineEdit)](#라인에디트qlinedit)   
   [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)   
-  [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-vertical-slider-다이얼dial)
+  [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-vertical-slider-다이얼dial)   
   [9.스택(Stacked Widget)](#스택stacked-widget)
  - [잡기술](#잡기술)   
   [1.레이아웃 꼭 적용하기](#레이아웃-꼭-적용하기)   
