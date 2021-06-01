@@ -20,7 +20,7 @@
   [3.버튼(QPushButton)](#버튼qpushbutton)   
   [4.라디오버튼(QRadioButton)](#라디오버튼qradiobutton)   
   [5.체크박스(QCheckBox)](#체크박스qcheckbox)   
-  [5.레이블(QLabel)](#레이블qlabel)   
+  [5.레이블(QLabel)](#레이블qlabel)     
   [6.라인에디트(QLineEdit)](#라인에디트qlinedit)   
   [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)   
   [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-vertical-slider-다이얼dial)   
@@ -302,7 +302,7 @@ self.pushButton_2.clicked.connect(self.two)
 ```
 버튼 두개를 두 함수와 연결
 
-```
+```python
 def one(self):
     self.content = self.label.text()
 
