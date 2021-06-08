@@ -2,7 +2,7 @@
 
 ## 쓰레드 기본
 
-![파일 불러오기 완료](https://github.com/wlxo0401/video_split/blob/main/readme_img/22.gif) 
+![쓰레드 기본](https://github.com/wlxo0401/PyQt/blob/main/readmeimg/22.gif) 
 
 ``` python
 import sys
