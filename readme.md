@@ -51,7 +51,9 @@
 > 작성자 : 김지태   
 > 참고 1 : https://wikidocs.net/book/2944   
 > 참고 2 : https://www.youtube.com/c/WandersonIsMe   
-> 참고 3 : https://het.as.utexas.edu/HET/Software/html/stylesheet-reference.html
+> 참고 3 : https://het.as.utexas.edu/HET/Software/html/stylesheet-reference.html   
+> 참고 4 : https://doc.qt.io/qt-5/qtcore-index.html   
+> 참고 5 : https://github.com/PyQt5/PyQt
 <hr>
 
 ```
@@ -61,7 +63,7 @@
 - 사용한 위주로 정리되었습니다.
 - 더 좋은 방법은 많습니다.
 - 개인적인 용도로 필력 수준이 떨어지고 남들이 보기 불편합니다.
-- 
+- 더 좋은 자료 많습니다.
 ```
 
 ## PyQt란?
@@ -501,7 +503,7 @@ self.[슬라이더, 다이얼 위젯 이름].setValue([바로 적용할 수])
 ### 스택(Stacked Widget)
 ![스택(Stacked Widget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/21.gif) 
 ```
-self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호]])
+self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호])
 ```
 > 스택 페이지를 입력해주면 간단하게 페이지를 이동할 수 있다.
 
