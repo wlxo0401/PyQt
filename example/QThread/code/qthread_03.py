@@ -1,11 +1,10 @@
-# QThread
-
-## 쓰레드 기본
-
-![쓰레드 기본](https://github.com/wlxo0401/PyQt/blob/main/readmeimg/22.gif) 
-
-``` python
+import ctypes
+import win32con
 import sys
+
+from win32process import SuspendThread
+from win32process import ResumeThread
+
 from PyQt5.QtCore import QThread
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QMainWindow
@@ -16,27 +15,25 @@ from PyQt5 import uic
 #단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
 form_class = uic.loadUiType("../ui/qthread_ui_01.ui")[0]
 
-# 쓰레드 코드 ex) class 쓰레드이름(QThread)
-class thread_001(QThread):
-    # 시그널 생성, 괄호 안에는 넘겨줄 변수 타입
-    value_signal = pyqtSignal(int)
 
-    # 쓰레드 시작시 수행
-    def __init__(self):
-        QThread.__init__(self)
+# 쓰레드 동작용 코드
+class Worker(QThread):
+    # 값 변화를 알리기 위한 변수
+    valueChanged = pyqtSignal(int)
+    handle = -1
 
-    # 쓰레드 주 동작
+    # 쓰레드 메인 동작 코드
     def run(self):
-        # 쓰레드 ID 확인용
-        print(f'thread id {int(QThread.currentThreadId())}')
-
-        # 임시 동작 for문
-        for i in range(1, 11):
-            print(f"value : {i}")
-            self.value_signal.emit(i)
+        try:
+            self.handle = ctypes.windll.kernel32.OpenThread(  # @UndefinedVariable
+                win32con.PROCESS_ALL_ACCESS, False, int(QThread.currentThreadId()))
+        except Exception as e:
+            print('get thread handle failed', e)
+        print('thread id', int(QThread.currentThreadId()))
+        for i in range(1, 101):
+            print('value', i)
+            self.valueChanged.emit(i)
             QThread.sleep(1)
-
-
 
 # 코드상 메인 부분
 class WindowClass(QMainWindow, form_class) :
@@ -92,13 +89,3 @@ if __name__ == "__main__" :
 
     #프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     app.exec_()
-```
-
-### moveToThread
-
-오브젝트를 생성해서 그것을 쓰레드로 바꾸는 기능 같음.
-
-왜 쓰는지는 잘 모름.   
-[코드보기](https://github.com/wlxo0401/PyQt/blob/main/example/QThread/code/qhread_02.py) 
-
-### SuspendThread
