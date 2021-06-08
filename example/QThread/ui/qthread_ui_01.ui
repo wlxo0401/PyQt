@@ -49,6 +49,9 @@ QProgressBar::chunk {
 }
 </string>
     </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
     <property name="value">
      <number>0</number>
     </property>
