@@ -102,3 +102,10 @@ if __name__ == "__main__" :
 [코드보기](https://github.com/wlxo0401/PyQt/blob/main/example/QThread/code/qhread_02.py) 
 
 ### SuspendThread
+![쓰레드 기본](https://github.com/wlxo0401/PyQt/blob/main/readmeimg/23.gif)    
+
+쓰레드를 일시 정지 시키고 재시작 하는 방법.
+
+[코드보기](https://github.com/wlxo0401/PyQt/blob/main/example/QThread/code/qhread_03.py) 
+
+[중국어 원문](https://github.com/PyQt5/PyQt/tree/master/QThread)
