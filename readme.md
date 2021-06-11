@@ -124,7 +124,7 @@ pip install PyQt6
 
 # 3. 시작하기 전
 ## 준비 코드
-```
+```python
 import sys
 
 from main import MainWindow
@@ -140,7 +140,7 @@ if __name__ == "__main__":
 메인 코드를 불러오기 위해서 실행되는 코드   
 굳이 필요는 없음
 
-```
+```python
 from PyQt5 import uic
 from PyQt5.QtCore import Qt
 
@@ -207,33 +207,33 @@ self.[버튼위젯 이름].clicked.connect(기능)
 > 라디오버튼은 다중 선택이 불가능합니다.
 
 라디오 버튼 토글(클릭)
-```
-self.라디오위젯 이름].toggled.connect([기능])
-self.라디오위젯 이름].clicked.connect([기능])
+```python
+self.[라디오위젯 이름].toggled.connect([기능])
+self.[라디오위젯 이름].clicked.connect([기능])
 ```
 > 위 두개다 사용 가능
 
 라디오 버튼 자동으로 체크를 걸기
-```
+```python
 self.[라디오위젯 이름].setChecked(True)
 ```
 > 체크를 다른 기능들을 통해서 자동으로 걸기 가능
 
 체크 여부 확인
-```
+```python
 self.[라디오위젯 이름].isChecked()
 ```
 > 체크 여부를 확인하여 if문등 사용 가능 True False로 알려줌
 
 ### 체크박스(QCheckBox)
 ![체크박스(QCheckBox)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/13.gif)
-```
+```python
 self.[체크박스 이름].stateChanged.connect([기능])
 ```
 > 체크박스 여부만 알고 있으면 다른 위젯들과 같이 조합해서 사용 가능합니다.
 
 예시
-```
+```python
 # 놀이를 고르는 체크 박스 두개
 self.checkBox.stateChanged.connect(self.work)
 self.checkBox_2.stateChanged.connect(self.work)
@@ -247,7 +247,7 @@ self.game = list()
 self.food = list()
 ```
 
-```
+```python
 def work(self):
         if self.checkBox.isChecked():
             if self.checkBox.text() not in self.game:
@@ -289,12 +289,12 @@ def work(self):
 텍스트 입/출력
 
 레이블 내용 받아오기 str 형식으로 받아옴
-```
+```python
 self.[레이블위젯 이름].text()
 ```
 
 레이블 내용 바꾸기 str 형식으로
-```
+```python
 self.[레이블위젯 이름].setText([넣을 내용 str만 가능])
 ```
 
@@ -325,23 +325,23 @@ def two(self):
 사용법은 레이블과 같음
 
 라인에디트 내용 받아오기
-```
+```python
 self.[라인에디트 이름].text()
 ```
 
 라인데이트 내용 바꾸기
-```
+```python
 self.[라인에디트 이름].setText([넣을 내용 str만 가능])
 ```
 
 계산기 예시
-```
+```python
 self.pushButton_2.clicked.connect(self.sum)
 self.pushButton_3.clicked.connect(self.reset)
 ```
 버튼 두개를 각각 더하기와 리셋 함수를 연결
 
-```
+```python
 def sum(self):
     # 라인 에디트에서 수를 받아옴
     a = self.lineEdit.text()
@@ -362,12 +362,12 @@ def reset(self):
 ![라인에디트(QLineEdit)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/6.gif)
 
 텍스트 변화를 인지해서 자동으로 기능 수행
-```
+```python
 self.[라인에디트 이름].textChanged.connect([기능])
 ```
 
 라인에디트에서 엔터를 클릭해서 기능 수행
-```
+```python
 self.[라인에디트 이름].returnPressed.connect([기능])
 ```
 
@@ -375,7 +375,7 @@ self.[라인에디트 이름].returnPressed.connect([기능])
 ![리스트위젯(QListWidget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/12.gif)
 > 리스트는 위젯(Widget)과 뷰(view)가 있는데 위젯이 더 간편한 것 같음   
 > 사용법은 같으나 편리함 정도 차이가 있음
-```
+```python
 # 한번 클릭
 self.[리스트위젯 이름].itemClicked.connect([기능])
 
@@ -387,7 +387,7 @@ self.[리스트위젯 이름].currentItemChanged.connect([기능])
 ```
 > 리스트위젯 클릭 이벤트를 담당하는 신호
 
-```
+```python
 # 선택된 리스트위젯 아이템 번호
 self.[리스트위젯 이름].currentRow()
 
@@ -400,7 +400,7 @@ self.[리스트위젯 이름].item(row)
 > 리스트 목록 정보를 가지고오는 함수들이다.
 > 객체반환은 함수 뒤에 ```.text()```를 하면 텍스트를 가지고옴
 
-```
+```python
 # 리스트위제위젯에 항목을 추가합니다.
 self.[리스트위젯 이름].addItem(String)
 
@@ -417,7 +417,7 @@ self.[리스트위젯 이름].clear()
 > Qt Designer를 통하여 다양한 속성 조절이 가능합니다.
 
 예시
-```
+```python
 # 버튼을 통하여 기능들을 연결합니다.
 self.pushButton.clicked.connect(self.add_item)
 self.pushButton_2.clicked.connect(self.insert_item)
@@ -431,7 +431,7 @@ self.listWidget.itemDoubleClicked.connect(self.double_click)
 self.listWidget.currentItemChanged.connect(self.change_item)
 ```
 
-```
+```python
 def add_item(self):
     self.listWidget.addItem(self.lineEdit.text())
 def insert_item(self):
@@ -442,7 +442,6 @@ def clear(self):
     self.listWidget.clear()
 def item_row(self):
     self.label_4.setText(self.listWidget.item(int(self.lineEdit_4.text())).text())
-
 
 def one_click(self):
     self.label_2.setText(str(self.listWidget.currentRow()))
@@ -458,7 +457,7 @@ def change_item(self):
 
 ### 슬라이더(QHorizontalSlider, QVerticalSlider), 다이얼(QDial)
 ![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/19.gif)   
-```
+```python
 self.[슬라이더, 다이얼 위젯 이름].value()
 self.[슬라이더, 다이얼 위젯 이름].minimum()
 self.[슬라이더, 다이얼 위젯 이름].maximum()
@@ -477,7 +476,7 @@ self.[슬라이더, 다이얼 위젯 이름].pageStep()
 
 
 ![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/18.gif)
-```
+```python
 # 위젯이 움직이면 기능 수행
 self.[슬라이더, 다이얼 위젯 이름].sliderMoved.connect([기능])
 
@@ -491,7 +490,7 @@ self.[슬라이더, 다이얼 위젯 이름].rangeChanged.connect([기능])
 > 하는 3가지 신호가 있다.
 
 ![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/20.gif) 
-```
+```python
 self.[슬라이더, 다이얼 위젯 이름].setMaximum([설정 최대 수])
 self.[슬라이더, 다이얼 위젯 이름].setMinimum([설정 최소 수])
 self.[슬라이더, 다이얼 위젯 이름].setSingleStep([움직일때 최소 수])
@@ -503,7 +502,7 @@ self.[슬라이더, 다이얼 위젯 이름].setValue([바로 적용할 수])
 
 ### 스택(QStackedWidget)
 ![스택(Stacked Widget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/21.gif) 
-```
+```python
 self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호])
 ```
 > 스택 페이지를 입력해주면 간단하게 페이지를 이동할 수 있다.
@@ -517,7 +516,19 @@ self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호])
 |----|----|
 | ![critical](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/34.PNG) | ![question](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/35.PNG) |
 
+```python
+from PyQt5.QtWidgets import QMessageBox
 
+QMessageBox.information(self, "타이틀입니다.", "안녕하세요. information 메세지 입력입니다.")
+QMessageBox.about(self, "타이틀입니다.", "안녕하세요. about 메세지 입력입니다.")
+QMessageBox.warning(self, "타이틀입니다.", "안녕하세요. warning 메세지 입력입니다.")
+QMessageBox.critical(self, "타이틀입니다.", "안녕하세요. critical 메세지 입력입니다.")
+QMessageBox.question(self, "타이틀입니다.", "안녕하세요. question 메세지 입력입니다.")
+```
+
+> 메세지를 표현하는 가장 기본 
+
+[출처](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=huntingbear21&logNo=221825482802)
 
 ## 잡기술
 
@@ -529,7 +540,7 @@ self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호])
 
 ### 프레임(타이틀바, title bar) 없애기 
 ![프레임(타이틀바, title bar) 없애기 ](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/6.PNG)
-```
+```python
 self.setWindowFlag(Qt.FramelessWindowHint)
 ```
 타이틀바를 없애고 custom하기 위해서 사용 가능
@@ -537,7 +548,7 @@ self.setWindowFlag(Qt.FramelessWindowHint)
 
 ### 프레임 및 배경 없애기
 ![프레임 및 배경 없애기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/5.PNG)
-```
+```python
 self.setAttribute(Qt.WA_TranslucentBackground)
 self.setWindowFlag(Qt.FramelessWindowHint)
 ```
@@ -545,7 +556,7 @@ show() 이전에 넣으면 없어짐
 
 ### 체크박스(QCheckBox)로 다른 체크박스 키고 끄기
 ![체크박스(QCheckBox)로 다른 체크박스 키고 끄기](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/14.gif)
-```
+```python
 # 체크 풀기
 self.[체크박스위젯 이름].setChecked(False)
 
@@ -556,7 +567,7 @@ self.[체크박스위젯 이름].setChecked(True)
 
 ### 위젯 활성화/비활성화(껏다 키기)
 ![위젯 활성화/비활성화(껏다 키기)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/15.gif)
-```
+```python
 # 비활성화
 self.[위젯 이름].setDisabled(True)
 
@@ -572,11 +583,11 @@ self.[위젯 이름].setEnabled(True)
 
 ![툴팁(ToolTip)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/17.gif)
 
-```
+```python
 from PyQt5.QtWidgets import QToolTip
 from PyQt5.QtGui import QFont
 ```
-```
+```python
 self.pushButton.setToolTip("버튼입니다. <br> 버튼22 <br> <b>두꺼운 글씨</b>")
 QToolTip.setFont(QFont('SansSerif', 30))
 ```
@@ -599,7 +610,7 @@ QToolTip.setFont(QFont('SansSerif', 30))
 
 > 방법 2 : 오른쪽 속성창에서 바로 입력 가능
 
-```
+```python
 self.[위젯 이름].setStyleSheet(
     "[위젯 종류] {color: white; background-color: rgb(58, 58, 58);}"
     "[위젯 종류]:[위젯 상황] { background-color:rgb(10, 10, 10); }"
