@@ -23,8 +23,9 @@
   [5.레이블(QLabel)](#레이블qlabel)     
   [6.라인에디트(QLineEdit)](#라인에디트qlineedit)   
   [7.리스트위젯(QListWidget)](#리스트위젯qlistwidget)   
-  [8.슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](#슬라이더horizontal-slider-vertical-slider-다이얼dial)   
-  [9.스택(Stacked Widget)](#스택stacked-widget)
+  [8.슬라이더(QHorizontalSlider, QVerticalSlider), 다이얼(QDial)](#슬라이더qhorizontalslider-qverticalslider-다이얼qdial)   
+  [9.스택(QStackedWidget)](#스택qstackedwidget)   
+  [10.메세지박스(QMessageBox)](#메세지박스qmessagebox)
  - [잡기술](#잡기술)   
   [1.레이아웃 꼭 적용하기](#레이아웃-꼭-적용하기)   
   [2.프레임(타이틀바, title bar) 없애기](#프레임타이틀바-title-bar-없애기)   
@@ -455,7 +456,7 @@ def change_item(self):
 ```
 > 각 기능들 사용 예시입니다.
 
-### 슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)
+### 슬라이더(QHorizontalSlider, QVerticalSlider), 다이얼(QDial)
 ![슬라이더(Horizontal Slider, Vertical Slider), 다이얼(Dial)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/19.gif)   
 ```
 self.[슬라이더, 다이얼 위젯 이름].value()
@@ -500,12 +501,21 @@ self.[슬라이더, 다이얼 위젯 이름].setValue([바로 적용할 수])
 ```
 > 상태 변경 
 
-### 스택(Stacked Widget)
+### 스택(QStackedWidget)
 ![스택(Stacked Widget)](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/21.gif) 
 ```
 self.[스택위젯 이름].setCurrentIndex([스택 페이지 번호])
 ```
 > 스택 페이지를 입력해주면 간단하게 페이지를 이동할 수 있다.
+
+### 메세지박스(QMessageBox)
+| information | about | warning |
+|----|----|----|
+| ![information](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/31.PNG) | ![about](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/32.PNG) | ![warning](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/33.PNG) |
+
+| critical | question |
+|----|----|
+| ![critical](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/34.PNG) | ![question](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/35.PNG) |
 
 
 
