@@ -67,7 +67,42 @@ PyQt는 Qt를 만든 곳이 아닌 다른 곳에서 Python을 위해서 바인�
 # 2. 시작하기 전
 
 ## 아나콘다 설치
-> 아나콘다는 파있넝
+
+아나콘다는 파이썬을 사용하면서 가상환경에서 프로그램을 작성할 수 있게 도와준다. 가상환경이라는게 거창해보이지만 독립적인 공간을 생성해준다고 보면 된다.
+사실 없어도되지만 그 독립적인 공간을 사용하다보면 엄청 편하다. 아나콘다가 아파트라면 독립공간은 1가구가 사는 집이라고 생각하면 편하다.
+
+그 독립적인 구간은 프로젝트 마다 생성하거나하는 방법으로 필요한 라이브러리들을 프로젝트마다 관리가 가능하다. 파이썬만 그냥 컴퓨터에 설치하고 사용할 경우 삭제를 하거나 재설치할때 불편하지만 아나콘다는 그 독립공간 하나만 삭제해주면된다. 처음이 불편하지 나중에는 정말 편하니 꼭 아나콘다를 사용하는 것이 좋다.
+
+위 내용은 PyQt뿐만 아니라 파이썬을 사용한다면 그냥 쓰자
+
+![아나콘다 홈페이지](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/0-0.PNG)
+
+[아나콘다 홈페이지](https://www.anaconda.com/products/individual) 에 접속해서 바로 다운로드 버튼을 눌러도 가능하다.
+
+![아나콘다 다운로드](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/0-1.PNG)
+
+화면하단에는 운영체제별로 선택이 가능하다.
+
+![다운로드 방법](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/1.PNG)
+
+![다운로드 방법](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/2.PNG)
+
+![다운로드 방법](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/3.PNG)
+
+대부분 개인적으로 사용할태니 Just Me를 클릭한다.
+
+사실 All Users라고하면 어떤게 다른지 해본적은 없다. 
+
+![다운로드 방법](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/4.PNG)
+
+경로는 뭐 시키는대로 설정하는 것이 좋아 보인다.
+
+![아나콘다 설치](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/5.PNG)
+
+개인적으로 위에만 체크해서 사용한다.
+여러번 재설치를하고 결국 이렇게 설치하는 법을 유지하는데 이유는 기억이 안난다.
+
+
 
 ## VSC 설치
 
