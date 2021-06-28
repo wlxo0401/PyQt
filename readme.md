@@ -50,7 +50,7 @@
 
 # 1. PyQt
 
-> 작성일자 2021-05-26 ~    
+> 작성일자 2021-05-26 ~ 2021-06-28   
 > 작성자 : 김지태   
 > 참고 1 : https://wikidocs.net/book/2944   
 > 참고 2 : https://www.youtube.com/c/WandersonIsMe   
