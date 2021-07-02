@@ -106,6 +106,13 @@ PyQt는 Qt를 만든 곳이 아닌 다른 곳에서 Python을 위해서 바인�
 
 ## VSC 설치
 
+![아나콘다 설치](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/VSC/1.PNG)
+
+[Visual Studio Code 홈페이지](https://code.visualstudio.com/)에 접속해서 바로 다운로드 버튼을 눌러도 가능하다.
+
+
+
+
 ## PyQt5 설치 
 ```
 pip install PyQt5
