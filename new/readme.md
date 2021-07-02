@@ -3,12 +3,11 @@
 [0. 개요](#0-개요)
 
 [1. PyQt](#1-PyQt)   
- - [PyQt란?](#pyqt란)
- - [PyQt의 특징](#pyqt의-특징)   
+ - [PyQt란?](#pyqt란) 
 
 [2. 시작하기 전](#2-시작하기-전)
- - [아나콘다 설치](#준비-코드)
- - [VSC 설치](#기타-사항)
+ - [아나콘다 설치](#아나콘다-설치)
+ - [VSC 설치](#VSC-설치)
  - [PyQt5 설치](#pyqt5-설치)   
  - [PyQt6 설치](#pyqt6-설치)   
 
@@ -47,8 +46,6 @@ PyQt(PySide)를 공부하면서 배운 정보나 기술을 정리하기 위해�
 > 참고 5 : https://github.com/PyQt5/PyQt   
 > 참고 6 : https://namu.wiki/w/Qt(%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC)
 <hr>
-
-
 
 ## PyQt란?
 
@@ -102,6 +99,16 @@ PyQt는 Qt를 만든 곳이 아닌 다른 곳에서 Python을 위해서 바인�
 개인적으로 위에만 체크해서 사용한다.
 여러번 재설치를하고 결국 이렇게 설치하는 법을 유지하는데 이유는 기억이 안난다.
 
+![아나콘다 설치](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/6.PNG)
+
+![아나콘다 설치](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/7.PNG)
+
+![아나콘다 설치](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/anaconda_install/8.PNG)
+
+설치 완료
+
+아나콘다는 기본적으로 설치가 끝나면 각각 독립된 공간을 만들어주면서 사용해야한다.
+그걸 가상환경을 사용한다고 하는데 VSC를 설치하고 진행하면된다.
 
 
 ## VSC 설치
@@ -110,7 +117,49 @@ PyQt는 Qt를 만든 곳이 아닌 다른 곳에서 Python을 위해서 바인�
 
 [Visual Studio Code 홈페이지](https://code.visualstudio.com/)에 접속해서 바로 다운로드 버튼을 눌러도 가능하다.
 
+VSC는 설치는 간단하기에 따로 설명을 추가하지는 않는다.
 
+
+## VSC를 가상환경 생성
+
+![터미널 열기](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/create_env/1.PNG)
+
+터미널 열기
+상단 메뉴 터미널 - 새 터미널
+
+VSC는 터미널 기능을 지원하는데 쉽게 생각하면 cmd가 되는 것이라고 생각하자
+기본 사용법은 알아야하니 검색을 통해서 익혀두는게 좋음.
+
+![콘다 버전 확인하기](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/create_env/2.PNG)
+
+```
+conda --version
+```
+설치된 콘다 버전을 확인 가능하다.
+
+![콘다 업데이트](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/create_env/3.PNG)
+
+```
+conda update conda
+```
+콘다 업데이트를 가능하게 한다.
+
+![콘다 가상환경 설치](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/create_env/4.PNG)
+
+```python
+conda create --name [가상환경이름] python=[파이썬 버전]
+```
+위와 같은 방법으로 가상환경 생성이 가능하다. 이름과 사용하고 싶은 파이썬 버전만 입력해도 자동으로 설치가 된다.
+
+![콘다 가상환경 실행](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/create_env/5.PNG)
+
+```
+activate TestEnv
+```
+내가 생성한 가상환경을 실행시키는 것이다.
+여기서 라이브러리를 설치하고 지우고해도 다른 가상환경 혹은 컴퓨터에 바로 깔린 파이썬은 영향을 받지 않는다.
+
+가상환경은 활성화, 비활성화, 삭제, 생성 등 다양하게 사용 가능하다. 그러니 conda 사용법을 익히는게 좋아보인다.
 
 
 ## PyQt5 설치 
