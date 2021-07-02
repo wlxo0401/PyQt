@@ -21,9 +21,9 @@
  - [기타 사항](#기타-사항)
 
 [5. 사용방법](#5-사용방법)
- - [QLayout](https://github.com/)
+ - [QLayout](https://github.com/wlxo0401/PyQt/tree/main/new/QLayout)
  - [위젯]   
-   [QFrame]   
+   [QFrame](https://github.com/wlxo0401/PyQt/tree/main/new/QFrame)   
    [QPushButton]   
 
 
