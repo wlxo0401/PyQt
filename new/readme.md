@@ -7,13 +7,25 @@
 
 [2. 시작하기 전](#2-시작하기-전)
  - [아나콘다 설치](#아나콘다-설치)
- - [VSC 설치](#VSC-설치)
+ - [VSC 설치](#vsc-설치)
  - [PyQt5 설치](#pyqt5-설치)   
  - [PyQt6 설치](#pyqt6-설치)   
 
-[3. Qt Desinger](#3-Qt-Desinger)   
+[3. Qt Designer](#3-qt-designer)   
+ - [Qt Designer 실행](#qt-designer-실행)
  - [창 생성](#창-생성)
  - [구역 설명](#구역-설명)
+
+[4. 시작](#4-시작)
+ - [준비 코드](#준비-코드)
+ - [기타 사항](#기타-사항)
+
+[5. 사용방법](#5-사용방법)
+ - [QLayout](https://github.com/)
+ - [위젯]
+   [QFrame]
+   [QPushButton]
+
 
 # 0. 개요
 
@@ -174,8 +186,84 @@ pip install PyQt6
 ```
 
 
-# 3. Qt Desinger   
+# 3. Qt Designer   
+## Qt Designer 실행
+![콘다 가상환경 실행](https://github.com/wlxo0401/PyQt/blob/main/new/Etc/readme_image/qt_designer/1.PNG)
+
+```
+designer
+```
+터미널 창 혹은 프로그램 검색해서 designer를 치면 바로 실행된다.
+
 ## 창 생성
+
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/1.PNG) 
+
+메인화면 모습
+
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/2.PNG)
+
+새로운 윈도우를 만들어주기 위해서
+
+```파일 - 새폼``` 클릭
+
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/3.PNG)
+
+원하는 폼을 선택 처음에는 보통 ```Main Window``` 선택
+
 ## 구역 설명
 
+![창생성](https://github.com/wlxo0401/Python_PyQt/blob/main/readmeimg/4.png)
 
+1. 생성된 폼
+2. 사용 가능한 도구들 모음
+3. 생성된 폼에 추가된 도구들 모음
+4. 스타일 설정
+
+나머지는 사용을 안해봐서 모르겠음  
+
+# 4. 시작
+## 준비 코드
+```python
+import sys
+
+from main import MainWindow
+from PyQt5 import QtWidgets
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    window = MainWindow()
+    app.exec_()
+```
+- run.py
+
+메인 코드를 불러오기 위해서 실행되는 코드   
+굳이 필요는 없음
+
+```python
+from PyQt5 import uic
+from PyQt5.QtCore import Qt
+
+from PyQt5.QtWidgets import QMainWindow
+
+form_class = uic.loadUiType("./ui_main.ui")[0]
+
+class MainWindow(QMainWindow, form_class):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.setupUi(self)
+        self.show()
+```
+- main.py
+
+메인 코드 ui를 연결하고 코드를 실행하고 등등   
+<br>
+
+## 기타 사항
+> 특수한 위젯만 사용 가능한 메소드가 아니면 다양하게 적용 가능합니다.   
+> ex) text(), setText(), clicked 등등   
+> 
+> 프레임(틀) 기능하는 위젯 안에는 다른 위젯을 추가로 넣을 수 있습니다.   
+> ex) layout, frame, groupbox, stacked Widget 등등
+>
+> 프레임 안에 위젯을 넣을 경우 스타일 적용할 때 구분을 잘해야함
