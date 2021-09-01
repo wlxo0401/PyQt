@@ -8,7 +8,7 @@ PyQt란, Qt의 레이아웃에 Python의 코드를 연결하여 GUI 프로그램
 
 # UI 사용 구조
 
-![UI 사용 구조](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/1.PNG)
+![UI 사용 구조](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/3.PNG)
 
 그림을 제대로 그린지는 모르겠지만 큰틀은 이렇고 다음 설명들과 함께 보면 이해되리라 생각된다.
 
@@ -24,7 +24,7 @@ UI 생성 방법은 ```Qt Desinger```, ```코드 작성```으로 두가지 방�
 
 ## Qt Desginer
 
-![Qt Desinger 이미지](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/3.PNG)
+![Qt Desinger 이미지](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/1.PNG)
 
 Qt Designer 프로그램을 이용해서 UI를 보고 배치할 수 있는 장점이 있습니다.
 
@@ -204,3 +204,5 @@ PY형식과 UI형식으로 했을 때 차이를 알고 싶었어 PyQt 디스코�
 cmd 창에서 입력하는 것만 익숙해진다면 익숙하게 가능하니 귀찮더라도 추천한다.
 
 cmd로 생성된 PY형식 파일을 열어보면 Python 코드로 작성되 [코드 방법](#코드-방법)과 같은 방법으로 UI가 생성되어있어서 정석으로 작성된 PyQt UI 생성 코드를 볼 수 있다.
+
+
