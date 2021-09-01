@@ -8,7 +8,7 @@ PyQt란, Qt의 레이아웃에 Python의 코드를 연결하여 GUI 프로그램
 
 # UI 사용 구조
 
-![UI 사용 구조](1png)
+![UI 사용 구조](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/1.PNG)
 
 그림을 제대로 그린지는 모르겠지만 큰틀은 이렇고 다음 설명들과 함께 보면 이해되리라 생각된다.
 
@@ -18,13 +18,13 @@ UI 생성 방법은 ```Qt Desinger```, ```코드 작성```으로 두가지 방�
 
 ## 코드 작성
 
-![코드 작성](2png)
+![코드 작성](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/2.PNG)
 
 코드를 이용해서 UI를 배칠할 수 있습니다.
 
 ## Qt Desginer
 
-![Qt Desinger 이미지](3png)
+![Qt Desinger 이미지](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/3.PNG)
 
 Qt Designer 프로그램을 이용해서 UI를 보고 배치할 수 있는 장점이 있습니다.
 
@@ -88,28 +88,28 @@ if __name__ == '__main__':
 
  하지만 실행하기 전에는 눈에 보이지 않아서 UI 배치가 어렵고 UI 구현에서도 에러가 발생할 수 있으니 방법이 있다는 것만 알고 넘어가는 것을 추천한다.
 
-![코드방법 실행](1gif)
+![코드방법 실행](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/1.gif)
 
 ## Qt Designer
 
 ### 공통 구간
 
-![Qt Designer 메인](4png)
+![Qt Designer 메인](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/4.PNG)
 
 원하는 폼을 선택해주세요. 저는 항상 Main Window로 시작하고 필요시 Dialog를 추가하는 방법으로 합니다.
 
-![Qt Designer 작업](2gif)
+![Qt Designer 작업](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/2.gif)
 
 UI를 배피하고 설정하고 ```Ctrl+R```을 누르면 미리보기가 실행된다.
 최종적으로 완료된다고 느껴지면 자신이 정한 폴더에 저장한다. 
 
-![ui파일](5png)
+![ui파일](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/5.PNG)
 
 생성된 UI파일
 
  ### UI 형식
 
-![UI형식 실행](3gif)
+![UI형식 실행](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/3.gif)
 
 ```python
 import sys
@@ -144,15 +144,15 @@ UI 위치를 제대로 적어준다면 위에 코드로 바로 실행이 가능�
 
 UI형식을 PY형식으로 바꾸기 위해서는 변환 작업이 필요한다.
 
-![cmd실행](4gif)
+![cmd실행](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/4.gif)
 
 UI파일이 존재하는 곳으로 이동해서 CMD 창을 실행시켜준다.
 
-![cmd실행](5gif)
+![cmd실행](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/5.gif)
 
 환경변수가 설정되어 Python이 바로 실행된다면 그냥 하고 Anaconda같은 환경을 사용한다면 PyQt라이브러리가 깔린 가상환경을 실행한다.
 
-![cmd실행](6gif)
+![cmd실행](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/6.gif)
 
 ```python
 python -m PyQt5.uic.pyuic -x [변환대상.ui] -o [변환완료이름.py]
@@ -186,10 +186,21 @@ if __name__ == "__main__" :
 UI파일은 PY파일로 변환했기 때문에 평소 Python import하듯이 클래스를
 추가해주면 바로 사용이 가능하다.
 
-![py파일](7gif)
+![py파일](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/7.gif)
 
 방법만 다를 뿐 같은 결과를 출력한다.
 
-![py파일](8gif)
+![py파일](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/8.gif)
 
 import를 하기 때문에 변수, 메소드가 자동완성이되어서 편하게 코딩이 가능하다.
+
+
+# 마무리 
+
+Qt Designer를 이용한 PY형식 방법이 제일 귀찮지만 프로그램 배포와 코딩하는 순간에는 편하다. 
+
+PY형식과 UI형식으로 했을 때 차이를 알고 싶었어 PyQt 디스코드 채널을 들어가서 물어봤으나 명확한 답변은 듣지 못했고 대부분 Qt Designer를 이용해 UI파일을 생성하고 PY형식으로 변환한다는 것이었다.
+
+cmd 창에서 입력하는 것만 익숙해진다면 익숙하게 가능하니 귀찮더라도 추천한다.
+
+cmd로 생성된 PY형식 파일을 열어보면 Python 코드로 작성되 [코드 방법](#코드-방법)과 같은 방법으로 UI가 생성되어있어서 정석으로 작성된 PyQt UI 생성 코드를 볼 수 있다.

@@ -14,6 +14,8 @@ class MainClass(QMainWindow):
         # UI 설정
         main_ui.setupUi(self)
 
+        main_ui.pushButton.clicked.connect(self.ecccc)
+
         # 화면을 보여준다.
         self.show()
 
