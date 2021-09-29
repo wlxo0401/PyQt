@@ -20,26 +20,26 @@ UI 생성 방법은 ```Qt Desinger```, ```코드 작성```으로 두가지 방�
 
 ![코드 작성](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/2.PNG)
 
-코드를 이용해서 UI를 배칠할 수 있습니다.
+코드를 이용해서 UI를 배칠할 수 있다.
 
 ## Qt Desginer
 
 ![Qt Desinger 이미지](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/1.PNG)
 
-Qt Designer 프로그램을 이용해서 UI를 보고 배치할 수 있는 장점이 있습니다.
+Qt Designer 프로그램을 이용해서 UI를 보고 배치할 수 있는 장점이 있다.
 
 ## 장단점
 
 **코드 작성**   
 코드를 이용해서 작성하면 python 코드로 기능을 추가할 때 각 UI 위젯들을 변수에 넣어서 사용하기 때문에
-자동완성이나 눈으로 찾아서 보는게 편합니다. 
+자동완성이나 눈으로 찾아서 보는게 편하다. 
 
 **Qt Designer**
-프로그램을 사용해서 UI를 배치하기 때문에 눈으로 보면서 쉽게 UI를 만들 수 있습니다. 
-연결하는 방법은 UI형식과 PY형식 두 가지로 나뉩니다.
+프로그램을 사용해서 UI를 배치하기 때문에 눈으로 보면서 쉽게 UI를 만들 수 있다. 
+연결하는 방법은 UI형식과 PY형식 두 가지로 나뉜다.
 
-UI 형식은 Qt Designer에서 바로 생성된 형태이며 코드상에서 불러오면 PyQt가 변환을 자동으로해서 연결시켜줍니다.
-하지만 프로그램 배포할 때 UI파일이 따로 보여질 확률이 크기 때문에 저는 추천하지 않습니다.
+UI 형식은 Qt Designer에서 바로 생성된 형태이며 코드상에서 불러오면 PyQt가 변환을 자동으로해서 연결 시킨다.
+하지만 프로그램 배포할 때 UI파일이 따로 보여질 확률이 크기 때문에 저는 추천하지 않는다.
 
 PY 형식은 Qt Designer에서 생성된 UI형식 파일을 python 코드로 변경해주어서 ```코드 작성``` 방법과 같은 식으로 사용된다.
 코드로 변환되기 때문에 프로그램 배포할 때 UI 양식을 숨길 수 있다.
@@ -188,7 +188,7 @@ UI파일은 PY파일로 변환했기 때문에 평소 Python import하듯이 클
 
 ![py파일](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/7.gif)
 
-방법만 다를 뿐 같은 결과를 출력한다.
+UI를 생성하는 방법만 다를 뿐 모두 같은 결과를 출력한다.
 
 ![py파일](https://github.com/wlxo0401/PyQt/blob/main/new/UI%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/image/8.gif)
 
